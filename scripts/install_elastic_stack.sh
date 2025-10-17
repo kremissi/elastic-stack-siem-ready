@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-# (installer content here)
+# Full installer will be provided in repo.

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-# (script content here)
+# Will create service token and write kibana.yml

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-# (enable beats content here)
+# Enable beats modules and load dashboards
