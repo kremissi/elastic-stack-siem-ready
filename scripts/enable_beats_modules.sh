@@ -8,17 +8,10 @@ if ! command -v filebeat >/dev/null 2>&1; then
   exit 1
 fi
 
-# Enable common modules (customize per host role)
+# Enable common modules
 sudo filebeat modules enable system || true
 sudo filebeat modules enable nginx || true
 sudo filebeat modules enable apache || true
-
-# Load dashboards and templates to Kibana/Elasticsearch (requires connectivity & creds)
-# Pass via env if not using defaults:
-#   export KIBANA_HOST="http://KIBANA_IP:5601"
-#   export ES_HOST="http://ES_IP:9200"
-#   export ES_USER="elastic"
-#   export ES_PASS="PASSWORD"
 
 : "${KIBANA_HOST:=http://localhost:5601}"
 : "${ES_HOST:=http://localhost:9200}"

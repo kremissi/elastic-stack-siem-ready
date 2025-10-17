@@ -6,8 +6,8 @@ filebeat.inputs:
     paths:
       - /var/log/*.log
 
-# Enable common modules on target hosts as needed:
-# filebeat modules enable system nginx apache mysql
+# Enable modules per host:
+# filebeat modules enable system nginx apache
 
 setup.kibana:
   host: "http://YOUR_KIBANA_HOST:5601"
