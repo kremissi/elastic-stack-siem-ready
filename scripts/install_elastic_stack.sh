@@ -159,11 +159,13 @@ maybe_open_firewall() {
       ufw allow "${KIBANA_PORT}/tcp" || true
       ufw allow "${LOGSTASH_BEATS_PORT}/tcp" || true
       ufw allow "${ES_HTTP_PORT}/tcp" || true
-    else
+       else
       warn "ufw not installed; skipping firewall changes."
     fi
-  }
+  fi
 }
+
+
 
 post_checks() {
   log "Sanity checks..."
