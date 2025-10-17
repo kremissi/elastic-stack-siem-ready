@@ -1,18 +1,1 @@
-# Filebeat sample for remote hosts
-filebeat.inputs:
-  - type: filestream
-    id: system-logs
-    enabled: false
-    paths:
-      - /var/log/*.log
-
-# Enable modules per host:
-# filebeat modules enable system nginx apache
-
-setup.kibana:
-  host: "http://YOUR_KIBANA_HOST:5601"
-  username: "elastic"
-  password: "YOUR_PASSWORD"
-
-output.logstash:
-  hosts: ["YOUR_LOGSTASH_HOST:5044"]
+# sample
