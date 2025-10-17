@@ -1,0 +1,15 @@
+# Winlogbeat sample config for forwarding to Logstash
+winlogbeat.event_logs:
+  - name: Security
+  - name: System
+  - name: Application
+
+# Ship to Logstash (replace host/IP and port)
+output.logstash:
+  hosts: ["YOUR_LOGSTASH_HOST:5044"]
+
+# Optional: setup dashboards to Kibana (if reachable from Windows host)
+setup.kibana:
+  host: "http://YOUR_KIBANA_HOST:5601"
+  username: "elastic"
+  password: "YOUR_PASSWORD"
