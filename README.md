@@ -1,22 +1,17 @@
-# ELK Docker Installer — Elastic 8.19.5 (Lab Mode)
+# 🦑 OctaSec – Elastic Stack Lab (Docker Edition)
 
-This script installs Docker (if needed) and deploys a single-node **Elastic Stack** (Elasticsearch + Logstash + Kibana) at `/opt/elk-lab`.
+Turn-key deployment of **Elasticsearch + Logstash + Kibana** using **Docker Compose**.  
+This is a ready-to-run SIEM lab for cybersecurity testing, training, and content creation.
 
-## Usage
+---
+
+## 🚀 Quick Install (Ubuntu 24.04 / 24.10)
+
 ```bash
-unzip elk-docker-installer.zip -d /opt
+cd /opt
+sudo apt update && sudo apt install -y wget unzip
+sudo wget https://github.com/kremissi/elastic-stack-siem-ready/raw/main/elk-docker-installer.zip
+sudo unzip elk-docker-installer.zip -d /opt/elk-docker-installer
 cd /opt/elk-docker-installer
 chmod +x install_elk_docker.sh
 sudo ./install_elk_docker.sh
-```
-
-Kibana: http://<your-ip>:5601  
-Elasticsearch: http://<your-ip>:9200  
-Logstash (Beats input): <your-ip>:5044
-
-Default credentials:  
-`elastic / OctaSec2025`
-
-## Notes
-- Lab mode: Security ON / no TLS (HTTP only)
-- Tested on Ubuntu 24.04
